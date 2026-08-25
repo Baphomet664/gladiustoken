@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Dark background gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#2A2420;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1C1C1C;stop-opacity:1" />
+    </radialGradient>
+    <!-- Gold gradient for temple -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4A853;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B7355;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C4A882;stop-opacity:1" />
+    </linearGradient>
+    <!-- Silver gradient for sword blade -->
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   style="stop-color:#9A9A9A;stop-opacity:1" />
+      <stop offset="25%"  style="stop-color:#D8D8D8;stop-opacity:1" />
+      <stop offset="50%"  style="stop-color:#F5F5F5;stop-opacity:1" />
+      <stop offset="75%"  style="stop-color:#D8D8D8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9A9A9A;stop-opacity:1" />
+    </linearGradient>
+    <!-- Bronze gradient for pommel and crossguard -->
+    <linearGradient id="bronzeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   style="stop-color:#CD7F32;stop-opacity:1" />
+      <stop offset="40%"  style="stop-color:#E8A958;stop-opacity:1" />
+      <stop offset="60%"  style="stop-color:#F0C070;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0621E;stop-opacity:1" />
+    </linearGradient>
+    <!-- Bronze radial for pommel sphere -->
+    <radialGradient id="pommelGrad" cx="38%" cy="35%" r="55%">
+      <stop offset="0%"   style="stop-color:#F0C878;stop-opacity:1" />
+      <stop offset="50%"  style="stop-color:#CD7F32;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7A4A10;stop-opacity:1" />
+    </radialGradient>
+    <!-- Glow filter gold -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Silver glow for blade -->
+    <filter id="silverGlow" x="-30%" y="-10%" width="160%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Bronze glow for pommel -->
+    <filter id="bronzeGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="190" fill="url(#bgGrad)"/>
+  <!-- Outer ring -->
+  <circle cx="200" cy="200" r="188" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" opacity="0.8"/>
+  <!-- Inner ring -->
+  <circle cx="200" cy="200" r="178" fill="none" stroke="url(#goldGrad)" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TEMPLE STRUCTURE                        -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Pediment / Roof triangle -->
+  <polygon points="200,65 318,118 82,118"
+           fill="url(#goldGrad)" opacity="0.95" filter="url(#glow)"/>
+  <!-- Pediment inner shadow -->
+  <polygon points="200,76 306,118 94,118"
+           fill="#1C1C1C" opacity="0.28"/>
+
+  <!-- Entablature (top beam) -->
+  <rect x="78" y="118" width="244" height="14" fill="url(#goldGrad)" opacity="0.95"/>
+  <rect x="78" y="129" width="244" height="2"  fill="#1C1C1C" opacity="0.2"/>
+
+  <!-- Four columns — evenly spaced -->
+  <!-- Column 1: x=95, Column 2: x=151, Column 3: x=231, Column 4: x=287 -->
+  <!-- Gap between col 2 and 3 is wider to frame the sword -->
+
+  <rect x="93"  y="132" width="20" height="114" rx="2" fill="url(#goldGrad)" opacity="0.92"/>
+  <rect x="151" y="132" width="20" height="114" rx="2" fill="url(#goldGrad)" opacity="0.92"/>
+  <rect x="229" y="132" width="20" height="114" rx="2" fill="url(#goldGrad)" opacity="0.92"/>
+  <rect x="287" y="132" width="20" height="114" rx="2" fill="url(#goldGrad)" opacity="0.92"/>
+
+  <!-- Column capitals (top) -->
+  <rect x="89"  y="130" width="28" height="5" rx="1" fill="url(#goldGrad)" opacity="0.98"/>
+  <rect x="147" y="130" width="28" height="5" rx="1" fill="url(#goldGrad)" opacity="0.98"/>
+  <rect x="225" y="130" width="28" height="5" rx="1" fill="url(#goldGrad)" opacity="0.98"/>
+  <rect x="283" y="130" width="28" height="5" rx="1" fill="url(#goldGrad)" opacity="0.98"/>
+
+  <!-- Column bases (bottom) -->
+  <rect x="89"  y="243" width="28" height="5" rx="1" fill="url(#goldGrad)" opacity="0.98"/>
+  <rect x="147" y="243" width="28" height="5" rx="1" fill="url(#goldGrad)" opacity="0.98"/>
+  <rect x="225" y="243" width="28" height="5" rx="1" fill="url(#goldGrad)" opacity="0.98"/>
+  <rect x="283" y="243" width="28" height="5" rx="1" fill="url(#goldGrad)" opacity="0.98"/>
+
+  <!-- Stylobate / Base steps (3 steps) -->
+  <rect x="78"  y="248" width="244" height="10" rx="1" fill="url(#goldGrad)" opacity="0.95"/>
+  <rect x="68"  y="258" width="264" height="9"  rx="1" fill="url(#goldGrad)" opacity="0.85"/>
+  <rect x="58"  y="267" width="284" height="9"  rx="1" fill="url(#goldGrad)" opacity="0.75"/>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- GLADIUS SWORD                           -->
+  <!-- Pommel sits inside pediment (~y=88)     -->
+  <!-- Blade tip points down to ~y=252         -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Blade — tapered, pointing downward -->
+  <!-- Crossguard at y=155, tip at y=250 -->
+  <polygon points="200,250 193,205 193,158 207,158 207,205"
+           fill="url(#silverGrad)"
+           filter="url(#silverGlow)"
+           opacity="0.97"/>
+
+  <!-- Blade fuller (centre spine) -->
+  <line x1="200" y1="158" x2="200" y2="243"
+        stroke="white" stroke-width="1" opacity="0.35"/>
+
+  <!-- Blade edge highlights -->
+  <line x1="193" y1="165" x2="200" y2="248"
+        stroke="white" stroke-width="0.4" opacity="0.2"/>
+  <line x1="207" y1="165" x2="200" y2="248"
+        stroke="white" stroke-width="0.4" opacity="0.2"/>
+
+  <!-- Crossguard — bronze -->
+  <rect x="176" y="152" width="48" height="9" rx="3.5"
+        fill="url(#bronzeGrad)" filter="url(#glow)" opacity="1"/>
+  <!-- Crossguard end knobs — bronze spheres -->
+  <circle cx="176" cy="156.5" r="6.5" fill="url(#pommelGrad)" opacity="1"/>
+  <circle cx="224" cy="156.5" r="6.5" fill="url(#pommelGrad)" opacity="1"/>
+
+  <!-- Grip — wrapped in bronze-toned leather -->
+  <rect x="195" y="118" width="10" height="36" rx="2.5"
+        fill="url(#bronzeGrad)" opacity="0.85"/>
+  <!-- Grip wrapping detail -->
+  <line x1="195" y1="124" x2="205" y2="124" stroke="#1C1C1C" stroke-width="1.2" opacity="0.35"/>
+  <line x1="195" y1="130" x2="205" y2="130" stroke="#1C1C1C" stroke-width="1.2" opacity="0.35"/>
+  <line x1="195" y1="136" x2="205" y2="136" stroke="#1C1C1C" stroke-width="1.2" opacity="0.35"/>
+  <line x1="195" y1="142" x2="205" y2="142" stroke="#1C1C1C" stroke-width="1.2" opacity="0.35"/>
+  <line x1="195" y1="148" x2="205" y2="148" stroke="#1C1C1C" stroke-width="1.2" opacity="0.35"/>
+
+  <!-- Pommel — large bronze sphere sitting inside the pediment -->
+  <!-- Centred at y=103 — well inside the triangle -->
+  <circle cx="200" cy="103" r="16"
+          fill="url(#pommelGrad)"
+          filter="url(#bronzeGlow)"
+          opacity="1"/>
+  <!-- Pommel highlight -->
+  <circle cx="194" cy="97" r="5" fill="white" opacity="0.18"/>
+  <!-- Pommel inner ring detail -->
+  <circle cx="200" cy="103" r="10" fill="none"
+          stroke="#A0621E" stroke-width="1" opacity="0.4"/>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TEXT                                    -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- GLADIUS -->
+  <text x="200" y="304"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="26"
+        font-weight="bold"
+        letter-spacing="8"
+        text-anchor="middle"
+        fill="url(#goldGrad)"
+        filter="url(#glow)"
+        opacity="0.95">GLADIUS</text>
+
+  <!-- $GLAD -->
+  <text x="200" y="324"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="12"
+        letter-spacing="5"
+        text-anchor="middle"
+        fill="#8B7355"
+        opacity="0.85">$GLAD</text>
+
+  <!-- Motto line 1 -->
+  <text x="200" y="346"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="8"
+        font-style="italic"
+        letter-spacing="0.8"
+        text-anchor="middle"
+        fill="#C4A882"
+        opacity="0.65">Catena vinciens libertatem,</text>
+
+  <!-- Motto line 2 -->
+  <text x="200" y="358"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="8"
+        font-style="italic"
+        letter-spacing="0.8"
+        text-anchor="middle"
+        fill="#C4A882"
+        opacity="0.65">aequalitatem, humanitatem</text>
+
+  <!-- Decorative dots flanking GLADIUS -->
+  <circle cx="112" cy="299" r="2.5" fill="#8B7355" opacity="0.55"/>
+  <circle cx="288" cy="299" r="2.5" fill="#8B7355" opacity="0.55"/>
+
+</svg>
